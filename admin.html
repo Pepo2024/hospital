@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>صفحة الإدارة - مارمينا التخصصيه</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo-section">
+                <div class="logo">
+                    <svg width="60" height="60" viewBox="0 0 60 60" fill="none">
+                        <circle cx="30" cy="30" r="28" fill="#d4d4d4" stroke="#999" stroke-width="2"/>
+                        <path d="M30 15 L35 25 L45 25 L37 32 L40 42 L30 35 L20 42 L23 32 L15 25 L25 25 Z" fill="#ffffff"/>
+                        <circle cx="30" cy="30" r="8" fill="#b0b0b0"/>
+                    </svg>
+                </div>
+                <div class="hospital-name">
+                    <h1>صفحة الإدارة</h1>
+                    <p>مارمينا التخصصيه</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <div class="admin-page">
+                <a href="index.html" class="back-btn">← العودة للصفحة الرئيسية</a>
+                
+                <h2>إدارة الحجوزات</h2>
+                
+                <div class="bookings-container">
+                    <!-- Pending Bookings -->
+                    <div class="bookings-section">
+                        <h3>الحجوزات المعلقة</h3>
+                        <div id="pendingBookings" class="bookings-list">
+                            <!-- سيتم ملؤها بواسطة JavaScript -->
+                        </div>
+                    </div>
+                    
+                    <!-- Confirmed Bookings -->
+                    <div class="bookings-section">
+                        <h3>الحجوزات المؤكدة</h3>
+                        <div id="confirmedBookings" class="bookings-list">
+                            <!-- سيتم ملؤها بواسطة JavaScript -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 <a href="https://www.facebook.com/share/1S2DkUqGk6/" target="_blank" class="footer-link">pepo melad</a> - جميع الحقوق محفوظة</p>
+        </div>
+    </footer>
+
+    <script type="module" src="admin.js"></script>
+</body>
+</html>

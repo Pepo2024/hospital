@@ -1,0 +1,514 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #f5f5f5 0%, #e8e8e8 100%);
+    min-height: 100vh;
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header Styles */
+.header {
+    background: linear-gradient(135deg, #ffffff 0%, #f0f0f0 100%);
+    padding: 20px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo-section {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hospital-name h1 {
+    color: #333;
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.hospital-name p {
+    color: #666;
+    font-size: 1.1rem;
+    font-weight: 300;
+}
+
+/* Main Content */
+.main-content {
+    padding: 40px 0;
+    min-height: calc(100vh - 200px);
+}
+
+.section-title {
+    text-align: center;
+    color: #333;
+    font-size: 2rem;
+    margin-bottom: 40px;
+}
+
+/* Departments Grid */
+.departments-section {
+    margin-top: 30px;
+}
+
+.departments-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.department-card {
+    background: #fff;
+    border-radius: 20px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.department-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+.department-image {
+    width: 100%;
+    height: 200px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #f8f8f8 0%, #e8e8e8 100%);
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.department-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.department-card h3 {
+    color: #555;
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.department-card p {
+    color: #666;
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+
+.btn-view {
+    background: linear-gradient(135deg, #e0e0e0 0%, #c0c0c0 100%);
+    color: #333;
+    border: 1px solid #b0b0b0;
+    padding: 12px 30px;
+    border-radius: 25px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.btn-view:hover {
+    transform: scale(1.05);
+    background: linear-gradient(135deg, #d0d0d0 0%, #b0b0b0 100%);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Footer */
+.footer {
+    background: #1a1a1a;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 50px;
+}
+
+.footer-link {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-link:hover {
+    color: #e0e0e0;
+    text-decoration: underline;
+}
+
+/* Doctors Page Styles */
+.doctors-page {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    padding: 40px;
+    margin: 30px auto;
+    max-width: 900px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.doctors-page h2 {
+    color: #555;
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 3px solid #b0b0b0;
+}
+
+.back-btn {
+    background: #666;
+    color: #fff;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-bottom: 30px;
+    transition: all 0.3s ease;
+}
+
+.back-btn:hover {
+    background: #555;
+    transform: scale(1.05);
+}
+
+.doctors-list {
+    display: grid;
+    gap: 20px;
+}
+
+.doctor-card {
+    background: linear-gradient(135deg, #f8f8f8 0%, #e8e8e8 100%);
+    padding: 25px;
+    border-radius: 15px;
+    border-right: 5px solid #b0b0b0;
+    transition: all 0.3s ease;
+}
+
+.doctor-card:hover {
+    transform: translateX(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.doctor-card h3 {
+    color: #555;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.doctor-card .time-range {
+    color: #888;
+    font-size: 1.1rem;
+    font-weight: normal;
+    margin-bottom: 10px;
+    margin-top: 5px;
+}
+
+.doctor-card p {
+    color: #666;
+    font-size: 1.1rem;
+}
+
+.btn-book {
+    background: linear-gradient(135deg, #e0e0e0 0%, #c0c0c0 100%);
+    color: #333;
+    border: 1px solid #b0b0b0;
+    padding: 10px 25px;
+    border-radius: 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.btn-book:hover {
+    transform: scale(1.05);
+    background: linear-gradient(135deg, #d0d0d0 0%, #b0b0b0 100%);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.admin-link {
+    display: inline-block;
+    background: #666;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+}
+
+.admin-link:hover {
+    background: #555;
+    transform: scale(1.05);
+}
+
+/* Booking Form Styles */
+.booking-page {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    padding: 40px;
+    margin: 30px auto;
+    max-width: 600px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.booking-page h2 {
+    color: #555;
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.doctor-spec {
+    text-align: center;
+    color: #666;
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+}
+
+.doctor-time {
+    text-align: center;
+    color: #888;
+    font-size: 1rem;
+    margin-bottom: 5px;
+}
+
+.dept-name {
+    text-align: center;
+    color: #888;
+    font-size: 1rem;
+    margin-bottom: 30px;
+}
+
+.booking-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-group label {
+    color: #555;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.form-group input,
+.form-group select {
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: #b0b0b0;
+}
+
+.btn-submit {
+    background: linear-gradient(135deg, #e0e0e0 0%, #c0c0c0 100%);
+    color: #333;
+    border: 1px solid #b0b0b0;
+    padding: 15px 30px;
+    border-radius: 25px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.btn-submit:hover {
+    transform: scale(1.05);
+    background: linear-gradient(135deg, #d0d0d0 0%, #b0b0b0 100%);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Admin Page Styles */
+.admin-page {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    padding: 40px;
+    margin: 30px auto;
+    max-width: 1200px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.admin-page h2 {
+    color: #555;
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.bookings-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.bookings-section {
+    background: #f8f8f8;
+    padding: 25px;
+    border-radius: 15px;
+    border: 2px solid #e0e0e0;
+}
+
+.bookings-section h3 {
+    color: #555;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #b0b0b0;
+}
+
+.bookings-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-height: 600px;
+    overflow-y: auto;
+}
+
+.booking-card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    border-right: 4px solid #b0b0b0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.booking-card.confirmed {
+    border-right-color: #4CAF50;
+}
+
+.booking-info p {
+    margin: 8px 0;
+    color: #555;
+    font-size: 1rem;
+}
+
+.booking-info strong {
+    color: #333;
+}
+
+.booking-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+    align-items: center;
+}
+
+.btn-confirm {
+    background: linear-gradient(135deg, #4CAF50 0%, #45a049 100%);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    flex: 1;
+    transition: all 0.3s ease;
+}
+
+.btn-confirm:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 15px rgba(76, 175, 80, 0.3);
+}
+
+.btn-delete {
+    background: linear-gradient(135deg, #f44336 0%, #d32f2f 100%);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-delete:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 15px rgba(244, 67, 54, 0.3);
+}
+
+.status-badge {
+    display: inline-block;
+    background: #4CAF50;
+    color: #fff;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+.no-bookings {
+    text-align: center;
+    color: #999;
+    font-size: 1.1rem;
+    padding: 40px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hospital-name h1 {
+        font-size: 2rem;
+    }
+    
+    .hospital-name p {
+        font-size: 0.9rem;
+    }
+    
+    .departments-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .bookings-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .booking-page {
+        padding: 25px;
+        margin: 20px;
+    }
+}

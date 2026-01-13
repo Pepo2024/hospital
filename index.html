@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مارمينا التخصصيه - الرعاية الصحية المتميزة</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo-section">
+                <div class="logo">
+                    <svg width="60" height="60" viewBox="0 0 60 60" fill="none">
+                        <circle cx="30" cy="30" r="28" fill="#d4d4d4" stroke="#999" stroke-width="2"/>
+                        <path d="M30 15 L35 25 L45 25 L37 32 L40 42 L30 35 L20 42 L23 32 L15 25 L25 25 Z" fill="#ffffff"/>
+                        <circle cx="30" cy="30" r="8" fill="#b0b0b0"/>
+                    </svg>
+                </div>
+                <div class="hospital-name">
+                    <h1>مارمينا التخصصيه</h1>
+                    <p>الرعاية الصحية المتميزة</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <section class="departments-section">
+                <h2 class="section-title">أقسام المستشفى</h2>
+                <div class="departments-grid">
+                    <!-- قسم الباطنة -->
+                    <div class="department-card" data-department="internal">
+                        <div class="department-image">
+                            <img src="بطنه.jpg" alt="قسم الباطنة">
+                        </div>
+                        <h3>قسم الباطنة</h3>
+                        <p>الطب الباطني والجهاز الهضمي</p>
+                        <button class="btn-view">عرض الأطباء</button>
+                    </div>
+
+                    <!-- قسم العيون -->
+                    <div class="department-card" data-department="eyes">
+                        <div class="department-image">
+                            <img src="عيون.jpg" alt="قسم العيون">
+                        </div>
+                        <h3>قسم العيون</h3>
+                        <p>طب وجراحة العيون</p>
+                        <button class="btn-view">عرض الأطباء</button>
+                    </div>
+
+                    <!-- قسم الأنف والأذن -->
+                    <div class="department-card" data-department="ent">
+                        <div class="department-image">
+                            <img src="انف واذن.jpg" alt="قسم الأنف والأذن">
+                        </div>
+                        <h3>قسم الأنف والأذن</h3>
+                        <p>أنف وأذن وحنجرة</p>
+                        <button class="btn-view">عرض الأطباء</button>
+                    </div>
+
+                    <!-- قسم العظام -->
+                    <div class="department-card" data-department="orthopedics">
+                        <div class="department-image">
+                            <img src="عظام.jpg" alt="قسم العظام">
+                        </div>
+                        <h3>قسم العظام</h3>
+                        <p>جراحة العظام والمفاصل</p>
+                        <button class="btn-view">عرض الأطباء</button>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 <a href="https://www.facebook.com/share/1S2DkUqGk6/" target="_blank" class="footer-link">pepo melad</a> - جميع الحقوق محفوظة</p>
+        </div>
+    </footer>
+
+    <script type="module" src="script.js"></script>
+</body>
+</html>
