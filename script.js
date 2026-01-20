@@ -35,7 +35,7 @@ const doctorsData = {
         },
         { 
             id: 'catherine_internal',
-            name: "د. كاترين مينا", 
+            name: "د. كاترين ميلاد", 
             specialization: "استشاري أمراض القلب",
             timeRange: "من 9 إلى 12"
         },
@@ -311,3 +311,4 @@ window.handleBooking = handleBooking;
 window.getBookings = getBookings;
 window.updateBookingStatus = updateBookingStatus;
 window.goBack = goBack;
+
